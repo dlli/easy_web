@@ -1,0 +1,70 @@
+/*
+
+@grid_margin: 10px;
+@grid_length: 12;
+@grid_content_width:65px;
+@unit: 1px;
+*/
+
+@grid_margin: 13px;
+@grid_length: 12;
+@grid_content_width:76px;
+@unit: 1px;
+
+
+
+.container{
+    display:block;
+    
+    width:(@grid_content_width+@grid_margin*2)*@grid_length ;
+    *width:((@grid_content_width+@grid_margin*2)*@grid_length)-@grid_margin*2;
+    _width:(@grid_content_width+@grid_margin*2)*@grid_length ;
+    
+    margin:0 auto;
+    box-sizing: border-box;
+}
+
+[class*="span"] {
+    /*float: left;
+    min-height: 1px;
+    margin-left: @grid_margin;*/
+}
+
+.row {
+    margin-left: -@grid_margin;
+    margin-right:-@grid_margin;
+    *zoom: 1;
+    position:relative;
+}
+
+.span (@length) when (@length > 0) {
+    .span@{length} {
+        width: (@length * @grid_content_width + (@length - 1) * @grid_margin * 2) * @unit;
+        float: left;
+        min-height: 1px;
+        margin-left: @grid_margin;
+        margin-right:@grid_margin;
+    }
+
+    .span(@length - 1);
+}
+.span (0) {}
+
+.span (@grid_length);
+
+@per_width: 100/@grid_length*1%;
+
+.dvd (@length) when (@length > 0) {
+    .dvd@{length} {
+        width: @length*@per_width;
+        float: left;
+        min-height: 1px;
+    }
+
+    .dvd(@length - 1);
+}
+
+
+.dvd (0) {}
+
+.dvd (@grid_length);

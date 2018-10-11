@@ -1,0 +1,26 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+.clear{
+    display:block;
+    visibility: hidden;
+    *zoom:1;
+    height:0;
+    line-height:0;
+    clear:both;
+}
+.clearafter{
+    .clearfix();
+}
+.clearfix{
+    .clearfix();
+}

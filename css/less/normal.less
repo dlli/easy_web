@@ -1,0 +1,64 @@
+*{
+    margin:0;padding:0;font-size:100%;box-sizing: border-box;
+}
+
+html,body{
+    height:100%;font-size:14px;font-family: "微软雅黑";
+}
+
+a{cursor: pointer;outline:none;text-decoration: none;}
+a,span{
+    color:inherit;
+}
+p{
+    line-height:1.7em;
+}
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  border:none;
+    outline:none;
+/*
+  For IE.
+  http://css-tricks.com/ie-fix-bicubic-scaling-for-images
+*/
+  -ms-interpolation-mode: bicubic;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+/*
+  For IE6 + IE7:
+
+  "display: list-item" keeps bullets from
+  disappearing if hasLayout is triggered.
+*/
+  display: list-item;
+}
+
+
+svg {
+/*
+  For IE9. Without, occasionally draws shapes
+  outside the boundaries of <svg> rectangle.
+*/
+  overflow: hidden;
+}
+
+i:after{
+    content:" ";
+}
+.pull-left {
+    float:left;
+    display:block;
+}
+.pull-right{
+    display:block;
+    float:right;
+}
