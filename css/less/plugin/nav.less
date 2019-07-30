@@ -1,0 +1,36 @@
+@nav-base-text:18px;
+@nav-base-color:#221815;
+@nav-item-padding:10px 0 15px;
+@nav-bg:#f3f3f5;
+@nav-base-line:1.4em;
+
+
+.nav{
+    background-color:@nav-bg;
+    a{
+        padding:@nav-item-padding;
+        text-align: center;
+        font-size:@nav-base-text;
+        color:@nav-base-color;
+        display:block;
+        float:left;
+        width:12.4%;
+        position: relative;left:0;top:0;
+        line-height:@nav-base-line;
+        span{
+            display:block;
+            width:100%;height:5px;
+            background-color:inherit;
+            bottom:0;
+            position: absolute;
+            left:0;
+        }
+    }
+    a.on{
+        span{
+            background-color: #bc0b0b;
+        }
+    }
+    
+    
+}

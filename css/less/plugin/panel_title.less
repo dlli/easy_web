@@ -1,32 +1,36 @@
-@font-color:#565656;
+@font-color:#bc0b0b;
 @font-color-on:white;
-@font-size:22px;
+@font-size:18px;
 @height:41px;
 @line-height:41px;
-@border:2px solid #bf1a20;
-@background-color:#bf1a20;
+@border:2px solid #bc0b0b;
+@background-color:#bc0b0b;
 /**
  * h4.panel-title>a.more{更多+}+span.title{选举任免}+span.clear
  **/
 .panel-title{
-    border-bottom: 1px solid #d6d6d6;
+//    border-bottom: 1px solid #d6d6d6;
+    padding:0 10px;
     .title{
         height:@height;
         line-height:@line-height;
-        padding:0 18px;
+        padding:0 6px;
         float:left;
         display:inline-block;
-        color:white;
+        color:@font-color;
         font-size:@font-size;
         position: relative;
         left:0;bottom:-2px;
-        font-weight: normal;
-        background:url(../../images/bg-indextitle.jpg) center repeat-x;
-        border-radius: 6px;
+        font-weight: normal;  
+    }
+    .bd{
+        display:block;float:left;border-left:5px solid #bc0b0b;
+        height:22px;
+        margin-top:12px;
     }
     .text{
         display:inline-block;
-        color:#243997;
+        color:#bc0b0b;
         font-size:13px;
         background-color:#e6f0fe;
         line-height:2em;
@@ -42,7 +46,7 @@
         height:@height;
         line-height:@line-height;
         font-size:12px;
-        color:#b8b8b8;
+        color:#bc0b0b;
         position: relative;
         left:0;
         top:.3em;
@@ -64,7 +68,7 @@
         display:block;width:100%;position: absolute;
         left:0;bottom:0;
         height:3px;
-        border-bottom:3px solid #2067ca;
+        border-bottom:3px solid #bc0b0b;
     }
     span.title{
         display:block;
@@ -73,13 +77,11 @@
         left:0;
         height:@height;
         line-height:@line-height;
-        font-size:@font-size;
-        width:151px;
-        text-align:center;
-        color:@font-color;
+        font-size:@font-size;  
+        color:#231815;
         float:left;
-        font-weight: normal;
-        width:33.333%;
+        font-weight: normal; 
+        padding:0 20px;
         
     }
     span.on{

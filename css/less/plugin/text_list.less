@@ -1,32 +1,32 @@
 
 @text-list-font-size: 14px;
-@base-color:#565656;
-@rt-color:#a0a1a3;
-@line-height:1.6;
+@base-color:#333;
+@rt-color:#888;
+@line-height:40px;
 
 .text-list .item{
     display:block;
     width:100%;
     font-size:@text-list-font-size;
-    height:@text-list-font-size*@line-height;
-    line-height:@text-list-font-size*@line-height;
+    height:@line-height;
+    line-height:@line-height;
     color:@base-color;
     .rt{
         float:right;
         color:@rt-color;   
         font-size:@text-list-font-size*0.88;
         .icon{
-            height:@text-list-font-size*@line-height;
+            height:@line-height;
             width:auto;
         }
     }
     .lft{
         float:left;
-        width:15px;
+        width:25px;
         background-image: url(../../images/text-list-icon.png);
         background-position: 3px center;
         background-repeat: no-repeat;
-    height:@text-list-font-size*@line-height;
+    height:@line-height;
     }
     .clearfix();
     i:after{
@@ -39,9 +39,9 @@
     .text-overflow;
 }
 .text-list .item:hover{
-    color:#cc0000;
+    color:#bc0b0b;
     .rt{
-        color:#cc0000;
+        color:#bc0b0b;
     }
 }
 .text-list{
